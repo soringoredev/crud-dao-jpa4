@@ -19,10 +19,10 @@ public class CrudAppApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 
 		return runner -> {
-			//createStudent(studentDAO);
+			createStudent(studentDAO);
 			//createMultipleStudents(studentDAO);
 
-			readStudent(studentDAO);
+			//readStudent(studentDAO);
 		};
 
 	}
@@ -33,7 +33,7 @@ public class CrudAppApplication {
 
 		// cream un obiect Student
 		System.out.println("Creating new student object ...");
-		Student newStudent = new Student("John","Doe", "john@pixelacademy.md");
+		Student newStudent = new Student("Vasile","Brinza", "vasea@pixelacademy.md");
 
 		// salvam obiectul Student in baza de date folosind DAO
 		System.out.println("Saving the student ...");
@@ -49,8 +49,8 @@ public class CrudAppApplication {
 		Student nasure4St109 = new Student("Maloren", "Levit", "iep@p.djrd");
 
 		System.out.println("Savex");
-	studentDAO.save(nasure4St109);
-	studentDAO.save(nasureSt109);
+		studentDAO.save(nasure4St109);
+		studentDAO.save(nasureSt109);
 
 	}
 
