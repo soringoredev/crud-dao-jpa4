@@ -19,10 +19,14 @@ public class CrudAppApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 
 		return runner -> {
-			createStudent(studentDAO);
+			//createStudent(studentDAO);
 			//createMultipleStudents(studentDAO);
-
 			//readStudent(studentDAO);
+
+			queryForStudents(studentDAO);
+
+
+
 		};
 
 	}
@@ -73,6 +77,12 @@ public class CrudAppApplication {
 
 		// show student details
 		System.out.println("Found the student: " + myStudent);
+	}
+
+	private void queryForStudents(StudentDAO studentDAO) {
+		// obtain students list
+
+		// show students list
 	}
 
 
