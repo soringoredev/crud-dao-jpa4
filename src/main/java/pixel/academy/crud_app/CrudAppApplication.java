@@ -8,6 +8,8 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import pixel.academy.crud_app.dao.StudentDAO;
 import pixel.academy.crud_app.entity.Student;
 
+import java.util.List;
+
 @SpringBootApplication
 public class CrudAppApplication {
 
@@ -81,8 +83,13 @@ public class CrudAppApplication {
 
 	private void queryForStudents(StudentDAO studentDAO) {
 		// obtain students list
+		List<Student> theStudents = studentDAO.findAll();
 
 		// show students list
+		for (Student newStudent : theStudents) {
+			System.out.println(newStudent);
+		}
+
 	}
 
 
